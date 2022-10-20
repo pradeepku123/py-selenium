@@ -10,5 +10,6 @@ def test_start():
     driver.get('http://localhost:3000')
     driver.find_element(By.CSS_SELECTOR,'#username').send_keys('Katharina_Bernier')
     driver.find_element(By.CSS_SELECTOR,'#password').send_keys('s3cret')
-    time.sleep(5)
-    
+    driver.refresh()
+    time.sleep(2)
+    driver.close()
